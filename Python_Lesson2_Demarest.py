@@ -61,11 +61,7 @@ while balance>0:
         print('Monthly payment too low. Balance can never be paid')
         cannot_pay = 1
         break        
-#Calculate number of years and months required to pay balance & provide total payment amount               
-#         else:        
-#               print ('It's taken ', (step-1)//12, ' years and ', (step-1)%12, ' months to pay off the loan. Total payment is $', '%.2f'% round((loan_amt+total_int),2)) 
-
-
+#Number of years and months required to pay and total payment amount               
 
 if(cannot_pay == 0):
     step = step - 1
@@ -76,3 +72,9 @@ if(cannot_pay == 0):
 
     total_amt = total_int + loan_amt
     print('Total amount paid %.2f' %(round(total_amt,2)))
+    
+    #2b.  Code tested correctly.
+    
+    #2c. The program take inputs of interest, payment and prinicple balance. Next a while statement checks if balance exceeds loan amount it stops the loop.  The code then uses If steatement to verify if the balance exceeds loan amount and ends with a stop loop.  
+    # The next else if statment verifies the balance remaining is less than payment, if true it uses balance for payment.  The next used if to check balance left is greater than monthly payment, then its deduct monthly payment from balance.  It then outputs the results
+    #
