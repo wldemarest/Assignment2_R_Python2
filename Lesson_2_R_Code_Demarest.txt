@@ -1,0 +1,26 @@
+#Wdemarest
+Homework 2:  Control Flow - Code
+ 
+ 
+ 
+Part a #Read airport file into R
+mydata = read.csv("airport.csv")  # read csv file 
+ 
+#Part b of control flow 
+for(airport_index in 1:length(Scheduled.Departures)){#iterate over scheduled departures
+ 	if(Scheduled.Departures[airport_index]< Performed.Departures[airport_index]){ #Check if scheduled departures are fewer than actual 
+ 		#print airport name if true
+ 		print(Airport[airport_index])
+ 	} #end if < actual
+}#end iteration over scheduled departures
+ 
+#Part c of control flow
+passenger_count=0
+for(airport_index in 1:length(Scheduled.Departures)){#iterate over scheduled departures
+ 	if(Scheduled.Departures[airport_index]< Performed.Departures[airport_index]){ #Check if scheduled departures are fewer than actual 
+ 		#count passangers if true
+ 		passenger_count=passenger_count+Passengers[airport_index]
+	} #if < actual
+}#end iteration over scheduled departures
+print(passenger_count)
+
